@@ -5,11 +5,11 @@ This application uses Ruby on Rails, and a locally installed sqlite3 database
 * Ensure that you have Ruby version 3.2.2. Verify this by running ```ruby --version``` in terminal
 
 * how to run the server:
-  * cd into the app folderchange into the app folder, Run: ```cd app``` 
+  * cd into the top level folder, Run ```cd bizzy-car-main```
   * Run: ```Rails S```
  
 * how to run unit tests:
-  * change into the app folder, Run: ```cd app```
+  * cd into the top level folder, Run ```cd bizzy-car-main```
   * Run: ```bin/rails test```
   * look at the output to see the integration tests calling the different endpoints
  
