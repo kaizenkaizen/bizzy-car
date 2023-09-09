@@ -1,28 +1,36 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+This application uses Ruby on Rails, and a locally installed sqlite3 database 
 
 * Ensure that you have Ruby version 3.2.2. Verify this by running ```ruby --version``` in terminal
 
-* System dependencies
+* how to run the server:
+  * cd into the `app` folderchange into the app folder ```cd app``` 
+  * Run: ```Rails S```
+ 
+* how to run unit tests:
+  * change into the app folder ```cd app```
+  * Run: ```bin/rails test```
+  * look at the output to see the integration tests calling the different endpoints
+ 
+* Sample output of unit tests
+  * TONY OUTPUT: Returning all customers in the system using endpoint <base_url>/customers/
+  * [{"id":980190962,"firstName":"john","lastName":"smith","phone":"123456789","email":"tony@gmail.com","created_at":"2023-09-09T07:44:07.932Z","updated_at":"2023-09-09T07:44:07.932Z"}]
+  * TONY OUTPUT: Returning all bookings in the system using endpoint <base_url>/bookings/
+  * [{"id":980190962,"start":"2023-09-08T13:30:00.000Z","end":"2023-09-08T14:30:00.000Z","vehicle_id":980190962,"customer_id":980190962,"created_at":"2023-09-09T07:44:07.930Z","updated_at":"2023-09-09T07:44:07.930Z","location":null}]
+980190962
+  * TONY OUTPUT: removing a booking using DELETE <base_url>/bookings/980190962
+  * TONY OUTPUT: Returning all bookings in the system using endpoint <base_url>/bookings/
+  * []
+  * TONY OUTPUT: adding a booking using POST <base_url>/bookings/
+  * TONY OUTPUT: Returning all bookings in the system using endpoint <base_url>/bookings/
+  * [{"id":1,"start":"2023-09-09T07:44:08.000Z","end":"2023-09-09T07:44:08.000Z","vehicle_id":980190962,"customer_id":980190962,"created_at":"2023-09-09T07:44:08.054Z","updated_at":"2023-09-09T07:44:08.054Z","location":"st johns auto"}]
+   * TONY OUTPUT: Returning all vehicles in the system using endpoint <base_url>/vehicles/
+   * [{"id":980190962,"year":"2021","make":"toyota","model":"avalon","created_at":"2023-09-09T07:44:07.933Z","updated_at":"2023-09-09T07:44:07.933Z"}]
+   * Finished in 0.145846s, 20.5696 runs/s, 0.0000 assertions/s.
+   * 3 runs, 0 assertions, 0 failures, 0 errors, 0 skips 
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* APIs are hosted at localhost:3000
-* The following routes are available
+* APIs are hosted at localhost:3000, the following routes are available:
 
 | Description       | URI Pattern | Controller#Action | 
 | ----------- | ----------- | ----------- |
