@@ -5,7 +5,7 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ensure that you have Ruby version 3.2.2. Verify this by running ```ruby --version``` in terminal
 
 * System dependencies
 
